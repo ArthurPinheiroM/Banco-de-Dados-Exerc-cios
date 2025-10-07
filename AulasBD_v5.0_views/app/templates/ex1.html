@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% load humanize %}
+
+{% block titulo_pagina %}
+    <h2>Exercício 1</h2>
+{% endblock %} 
+
+{% block conteudo %}
+
+    <div class="dashboard">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome da UF</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for uf in ufs %}
+                    <tr>
+                        <td>{{uf}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+    </div>
+
+{% endblock %}
